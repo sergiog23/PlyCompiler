@@ -142,7 +142,7 @@ def p_expression_binop( p ) :
 def p_expression_unop( p ) :
   ''' expression : MINUS expression %prec UMINUS
         | PLUS expression %prec UPLUS'''
-  p[0] = UnaryOp( p.lineno(2), p[1], p[2] )
+  p[0] = UnaryOp( p.lineno(1), p[1], p[2] )
 
 
 # Parenthesized expression
